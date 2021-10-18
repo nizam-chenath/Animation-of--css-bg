@@ -1,0 +1,38 @@
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images\ \(1\).jpeg);
+}
+.part{
+    text-decoration: none;
+    font-size: 70px;
+    color: white;
+    background-color: #90d5ec;
+    background-image: linear-gradient(315deg, #90d5ec 0%, #fc575e 74%);
+    padding: 100px 210px;
+    border-radius: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.part::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 25px;
+    z-index: -1;
+    background-color: #f7b42c;
+    background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
+    opacity: 0;
+    transition: opacity ease 1s;
+}
+
+.part:hover::before{
+   opacity: 1;
+
+}
